@@ -1,6 +1,6 @@
 parameters:
   webAppVarName: 'WebAppNameStaging'
-  environment: "staging"
+  environment: 'staging'
 
 jobs:
 - deployment: Deploy
