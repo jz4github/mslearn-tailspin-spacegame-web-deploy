@@ -1,7 +1,7 @@
 parameters:
   webAppVarName: 'WebAppNameStaging'
 
-Jobs:
+jobs:
 - deployment: Deploy
     pool:
       vmImage: 'ubuntu-18.04'
