@@ -87,7 +87,7 @@ stages:
   - template: templates/deploy.yml
     parameters:
       webAppVarName: 'WebAppNameDev'
-      environment: "dev"  
+      environmentName: "dev"  
 
 - stage: 'Test'
   displayName: 'Deploy to the test environment'
@@ -97,7 +97,7 @@ stages:
   - template: templates/deploy.yml
     parameters:
       webAppVarName: 'WebAppNameTest'
-      environment: "test"  
+      environmentName: "test"  
 
 - stage: 'Staging'
   displayName: 'Deploy to the staging environment'
@@ -106,4 +106,4 @@ stages:
   - template: templates/deploy.yml
     parameters:
       webAppVarName: 'WebAppNameStaging'  
-      environment: "staging"
+      environmentName: "staging"
