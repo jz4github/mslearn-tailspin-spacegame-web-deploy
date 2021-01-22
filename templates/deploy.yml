@@ -1,12 +1,12 @@
 parameters:
   webAppVarName: 'WebAppNameStaging'
-  environment: 'staging'
+  environmentName: 'staging'
 
 jobs:
 - deployment: Deploy
   pool:
     vmImage: 'ubuntu-18.04'
-  environment: ${{environment}}
+  environment: ${{environmentName}}
   variables:
   - group: 'Release'
   strategy:
