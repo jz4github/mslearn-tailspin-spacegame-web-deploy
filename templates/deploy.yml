@@ -6,7 +6,7 @@ jobs:
 - deployment: Deploy
   pool:
     vmImage: 'ubuntu-18.04'
-  environment: ${{environmentName}}
+  environment: ${{ environmentName }}
   variables:
   - group: 'Release'
   strategy:
@@ -19,5 +19,5 @@ jobs:
           displayName: 'Azure App Service Deploy: website'
           inputs:
             azureSubscription: 'Resource Manager - Tailspin - Space Game'
-            appName: '$(${{webAppVarName}})'
+            appName: '$(${{ webAppVarName }})'
             package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
